@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniCam</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images\fav" sizes="32x32" href="images/favicon.ico">
+</head>
+<body>
+  <div class="fnaf-container">
+    <img src="images/fnaf.jpg" alt="FNAF Map" class="background-ui">
+
+    <div class="camera-monitor">
+      <div class="static-overlay" id="staticEffect"></div>
+      <video id="videoStream" autoplay muted playsinline></video>
+      <div class="cam-label" id="camLabel">SÉLECTIONNEZ UNE CAM</div>
+    </div>
+
+    <div class="map-overlay">
+  <button class="cam-btn cam1a" onclick="changeCamera('CAM 1A', 'https://vjs.zencdn.net/v/oceans.mp4')">1A</button>
+  
+  <button class="cam-btn cam1b" onclick="changeCamera('CAM 1B', 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')">1B</button>
+  
+  <button class="cam-btn cam1c" onclick="changeCamera('CAM 1C', 'https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8')">1C</button>
+  
+  <button class="cam-btn cam2a" onclick="changeCamera('CAM 2A', 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8')">2A</button>
+
+  <button class="cam-btn cam2b" onclick="changeCamera('CAM 2B', 'https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8')">2B</button>
+    </div>
+  </div>
+
+  <audio id="camSound" src="SE/Changing Camera Sound from Fnaf.mp3" preload="auto"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>

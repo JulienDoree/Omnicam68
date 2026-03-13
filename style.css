@@ -1,0 +1,99 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+.fnaf-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-ui {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none; /* Laisse cliquer les boutons par-dessus */
+}
+
+/* Écran Vidéo décalé comme sur l'image */
+.camera-monitor {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 50%;
+  height: 65%;
+  background: #000;
+  border: 2px solid #333;
+  overflow: hidden;
+}
+
+#videoStream {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.5) contrast(1.2);
+}
+
+/* Effet de neige/parasites */
+.static-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnczMjl6eXltMzdkdWo5b2JxZzJpenlrYWdlMjRvcG9ub2FzY3UwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XuBNdP9Pb7W9i/giphy.gif');
+  pointer-events: none;
+  z-index: 10;
+  display: none; /* S'active au changement de cam */
+}
+
+.cam-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  text-shadow: 2px 2px black;
+  z-index: 11;
+}
+
+/* Boutons de la Carte */
+.map-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+}
+
+.cam-btn {
+  position: absolute;
+  background: #333;
+  border: 2px solid #fff;
+  color: white;
+  padding: 5px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cam-btn:hover {
+  background: #00ff00;
+  color: black;
+}
+
+/* Coordonnées approximatives pour coller à l'image fnaf.jpg */
+.cam1a { top: 48.5%; left: 74.5%; }
+.cam1b { top: 54.5%; left: 70%; }
+.cam1c { top: 67%; left: 71%; }
+.cam5  { top: 59%; left: 65%; }
+.cam3  { top: 79%; left: 68%; }
+.cam2a { top: 81%; left: 74.5%; }
+.cam2b { top: 88.5%; left: 74.5%; }
+.cam7  { top: 58.5%; left: 88%; }
+.cam4a { top: 81%; left: 83%; }
+.cam4b { top: 88.5%; left: 83%; }
+.cam6  { top: 78%; left: 88%; background: #555; } /* Cuisine souvent audio-only */
